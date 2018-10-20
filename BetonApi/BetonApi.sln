@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetonApi", "BetonApi\BetonA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{CF7329F8-C738-405B-B871-39CC53324072}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickConstructor", "PickConstructor\PickConstructor.csproj", "{6D7CECB2-0B3D-4A5F-A5F3-4AFFC0C3A7F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CF7329F8-C738-405B-B871-39CC53324072}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF7329F8-C738-405B-B871-39CC53324072}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF7329F8-C738-405B-B871-39CC53324072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D7CECB2-0B3D-4A5F-A5F3-4AFFC0C3A7F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D7CECB2-0B3D-4A5F-A5F3-4AFFC0C3A7F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D7CECB2-0B3D-4A5F-A5F3-4AFFC0C3A7F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D7CECB2-0B3D-4A5F-A5F3-4AFFC0C3A7F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -17,7 +17,7 @@ namespace BetonApi
         private readonly HttpClient httpClient;
 
 
-        public BetonClient(short sid, string key)
+        public BetonClient(uint sid, string key)
         {
             httpClient = new HttpClient { BaseAddress = new Uri(baseUrl) };
 
@@ -28,15 +28,17 @@ namespace BetonApi
             };
         }
 
-        public async Task<string> SendPick(string content, byte email = 0, byte publish = 0)
+        public async Task<string> SendPick(string content, byte email = 1, byte publish = 1)
         {
             reqParams.Add("email", email.ToString());
             reqParams.Add("publish", publish.ToString());
 
             var response = await httpClient.PostAsync(urlSegment.Build(reqParams),
-                new StringContent(content, Encoding.ASCII, "application/x-www-form-urlencoded")).ConfigureAwait(false);
+                new StringContent(content, Encoding.GetEncoding("windows-1251"), "application/x-www-form-urlencoded")).ConfigureAwait(false);
 
-           return await Task.Factory.StartNew(() => response.Content.ReadAsStringAsync().Result);
+            response.EnsureSuccessStatusCode();
+
+            return await Task.Factory.StartNew(() => response.Content.ReadAsStringAsync().Result);
         }
     }
 }
