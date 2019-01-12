@@ -14,7 +14,6 @@ namespace BetonApi
 
         private readonly HttpClient httpClient;
 
-
         public BetonClient(uint sid, string key)
         {
             httpClient = new HttpClient { BaseAddress = new Uri("https://www.betonsuccess.ru") };
